@@ -1,0 +1,48 @@
+nav {
+    margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+dd {
+    margin-bottom: 10px;
+}
+
+.book-container .panel-body {
+    min-height: 130px;
+}
+.book-container img {
+    height: 80px;
+    width: 90px;
+}
+.book-container .price-label {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.book-container .price-label p {
+    margin: 4px 0 0 0;
+}
+
+.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
+    background-color: #bce8f1;
+}
+
+.fixed {
+    position: fixed;
+    top: 180px;
+    width: 400px;
+    height: 120px;
+}
+
+.font {
+    font-size: 80%;
+}
+
+.padding {
+    padding-left: 5px;
+}
+
+.tablewidth {
+    width: 10%;
+}
+

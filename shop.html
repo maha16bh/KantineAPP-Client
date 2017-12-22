@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta charset="UTF-8">
+    <title>Shop - Spisestuerne</title>
+
+    <!-- Inspiration taken by: -->
+    <!-- https://www.w3schools.com/html/html_tables.asp -->
+    <!-- https://www.w3schools.com/css/ -->
+    <!-- https://github.com/Distribuerede-Systemer-2017/javascript-client/blob/exercise/js/shop.js -->
+
+</head>
+<body>
+
+<!-- Live basket -->
+
+<div class="fixed container">
+        <div class="row">
+            <div class="col-lg-0">
+                <table class="table tablewidth font">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Pcs</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="basket-tbody2">
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+
+        <div class="row padding">
+                <button class="btn btn-info" id="go-to-checkout-button">Go to checkout</button>
+            </div>
+        </div>
+</div>
+
+<!-- Shop -->
+<div class="modal fade" id="purchase-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog " role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <table class="table">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>Title</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                    </thead>
+                    <tbody id="basket-tbody">
+
+                    </tbody>
+                </table>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <a href="checkout.html">
+                    <button type="button" class="btn btn-success">Proceed to checkout</button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="container">
+
+    <div class="row" id="nav-container"></div>
+
+    <div class="page-header">
+        <h1>Shop - choose your desired consumables!</h1>
+    </div>
+
+    <div class="row" id="item-list">
+
+    </div>
+
+
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">2017 © Malte Hæstrup - Spisestuerne</p>
+    </div>
+</footer>
+
+<script src="lib/js/jquery-3.2.1.js"></script>
+<script src="lib/js/bootstrap.js"></script>
+<script src="js/sdk.js"></script>
+<script src="js/shop.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

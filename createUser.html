@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta charset="UTF-8">
+    <title>Create User</title>
+
+    <!-- Inspiration taken by: -->
+    <!-- https://www.w3schools.com/html/html_tables.asp -->
+    <!-- https://www.w3schools.com/css/ -->
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row" id="nav-container"></div>
+
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="page-header">
+                <h1>Create user</h1>
+                <div id="load-test"></div>
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="inputDesiredUsername">Desired username</label>
+                <input type="username" class="form-control" id="inputDesiredUsername" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label class="control-label" for="inputDesiredPassword">Desired password</label>
+                <input type="password" class="form-control" id="inputDesiredPassword" placeholder="Password">
+            </div>
+            <button style="margin-bottom: 40px" class="btn btn-default" id="create-user">Create user</button>
+        </div>
+    </div>
+
+
+</div>
+
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">2017 © Malte Hæstrup - Spisestuerne</p>
+    </div>
+</footer>
+
+<script src="lib/js/jquery-3.2.1.js"></script>
+<script src="lib/js/bootstrap.js"></script>
+<script src="js/sdk.js"></script>
+<script src="js/createUser.js"></script>
+
+</body>
+</html>

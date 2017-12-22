@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <link rel="stylesheet" href="lib/css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <meta charset="UTF-8">
+    <title>Just-pay Spisestuerne</title>
+
+    <!-- Inspiration taken by: -->
+    <!-- https://www.w3schools.com/html/html_tables.asp -->
+    <!-- https://www.w3schools.com/css/ -->
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="row" id="nav-container"></div>
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="jumbotron">
+                <h1 class="display-3">Welcome to Just-pay!</h1>
+                <p class="lead">Why waste time waiting for your food?</p>
+                <p>This site allows you to order your food and drinks from the canteen, online</p>
+                <hr class="my-4">
+                <p class="lead">
+                <p>Use the menu's above to navigate through the site</p>
+                <a class="btn btn-success btn-lg" href="shop.html" role="button">Visit the shop</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer class="footer">
+    <div class="container">
+        <p class="text-muted">2017 © Malte Hæstrup - Spisestuerne.</p>
+    </div>
+</footer>
+
+<script src="lib/js/jquery-3.2.1.js"></script>
+<script src="lib/js/bootstrap.js"></script>
+<script src="js/sdk.js"></script>
+<script>
+    SDK.User.loadNav();
+</script>
+
+</body>
+</html>
