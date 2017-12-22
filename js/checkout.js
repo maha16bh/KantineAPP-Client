@@ -8,12 +8,23 @@ $(document).ready(() => {
     const $modalTbody = $("#basket-tbody");
     const $modalTbody2 = $("#basket-tbody2");
     const $checkoutActions = $("#checkout-actions");
+    const $nothingInBasketContainer = $("#nothing-in-basket-container");
+
 
     //Function that loads the basket by adding every item in the localstorage to a table.
     function loadBasket() {
         const currentUser = SDK.User.current();
         const item = SDK.Storage.load("basket") || [];
         let total = 0;
+
+        $nothingInBasketContainer.show();
+
+        //tjekker om basket er tomt eller ej.
+        if (!basket.length) {
+            $("#checkout-table-container").hide();
+        } else {
+            $nothingInBasketContainer.hide();
+        }
 
         //Foreach loop that runs through every "entry" in the basket section of the local storage
         item.forEach(entry => {
@@ -99,7 +110,7 @@ $(document).ready(() => {
             itemList.push(basket[i].item);
         });
 
-
+        //Creates ordrer with a userId and an item array as parameters.
         SDK.Order.create(userId, itemList, (data, err)=>{
 
             SDK.Storage.remove("basket");

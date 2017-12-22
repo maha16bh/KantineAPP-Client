@@ -15,11 +15,6 @@ $(document).ready(() => {
         //forEach loop that runs through all the items in the database and adds them to the shop.
         allItemsList.forEach((item) => {
 
-            const id = item.itemId;
-            const name = item.itemName;
-            const description = item.itemDescription;
-            const price = item.itemPrice;
-
             //HTML element to be injected into the Tbody (the shops design).
             const itemHTML = `
         <div class="col-lg-4 book-container">
@@ -34,6 +29,7 @@ $(document).ready(() => {
                     <div class="col-lg-8">
                       <dl>
                         <dt>Description</dt>
+                        <!-- Henter item's description i databasen -->
                         <dd>${item.itemDescription}</dd>
                         <dt>Caloric contents</dt>
                         <dd>Ask the personel for specifics</dd>
@@ -43,9 +39,11 @@ $(document).ready(() => {
                 <div class="panel-footer">
                     <div class="row">
                         <div class="col-lg-4 price-label">
+                        <!-- Henter item's price i databasen -->
                             <p>Kr. <span class="price-amount">${item.itemPrice}</span></p>
                         </div>
                         <div class="col-lg-8 text-right">
+                        <!-- Henter item's itemId i databasen -->
                             <button class="btn btn-success purchase-button" data-item-id="${item.itemId}">Add to basket</button>
                         </div>
                     </div>

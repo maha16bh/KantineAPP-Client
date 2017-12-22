@@ -24,11 +24,13 @@ $(document).ready(() => {
                 if (code == 401) {
                     $(".form-group").addClass("has-error");
                     window.alert("Wrong input.");
+                    $("#inputUsername").val("Incorrect input");
+                    $("#inputPassword").val("Incorrect input");
                 }
                     //if the status code returned by the server is 400:
                 else if (code == 400) {
                     $(".form-group").addClass("has-error");
-                    console.log("Wrong input.");
+                    window.alert("Wrong input");
                 }
                 //Otherwise we asssume it is 200 (Token etc have already been stored in the SDK method).
                 else {
